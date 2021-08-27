@@ -54,8 +54,15 @@ main {
     font-weight: 400;
 }
 
-.QA-each>.answers {
-    display: none;
+.answers {
+    /* display: none; */
+}
+
+.answers p {
+    overflow: hidden;
+    height: 0;
+    /* height: 30px; */
+    color: rgb(0, 0, 0);
 }
 
 .question {
@@ -111,6 +118,7 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-position: 54% 188%;
     }
     .text-container>h1 {
         font-weight: 700;
@@ -143,13 +151,12 @@ main {
 
 /* -----script---- */
 
+.active {
+    height: 50px;
+}
 
-/* .active {
+.question.active .h3 {
     font-weight: 700 !important;
-} */
-
-.active.h3 {
-    font-weight: 700px !important;
 }
 
 .question.active img {
@@ -157,6 +164,6 @@ main {
     transform: all 0.3s ease-in !important;
 }
 
-.answers.active {
-    display: block;
+.question.active .answers p {
+    height: 30px;
 }
